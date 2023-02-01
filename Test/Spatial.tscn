@@ -1,0 +1,49 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Test/scripts/camera.gd" type="Script" id=1]
+[ext_resource path="res://Test/texture/images.png" type="Texture" id=2]
+[ext_resource path="res://Test/texture/png-transparent-stone-stone-stone-stone-age-rock-thumbnail.png" type="Texture" id=3]
+[ext_resource path="res://Test/texture/png-clipart-inflatable-swim-ring-swimming-pool-flamingo-inflatable-ring-magenta-thumbnail.png" type="Texture" id=4]
+[ext_resource path="res://Test/texture/ea.png" type="Texture" id=5]
+
+[sub_resource type="SphereMesh" id=6]
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_texture = ExtResource( 5 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 4 )
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.0392157, 0.988235, 0.988235, 1 )
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.0352941, 1, 0.027451, 1 )
+albedo_texture = ExtResource( 2 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+script = ExtResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.147991, 1.17243, 2.30434 )
+snap = 0.213
+mesh = SubResource( 6 )
+material = SubResource( 7 )
+
+[node name="CSGTorus" type="CSGTorus" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.87825, 0.0200162, 4.44917 )
+material = SubResource( 3 )
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4 )
+material = SubResource( 1 )
+
+[node name="Ground" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.96822, -4.03439 )
+width = 40.0
+height = 1.0
+depth = 40.0
+material = SubResource( 2 )
