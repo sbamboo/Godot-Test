@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blub.png-4dbe4228dd2f65d0f84e40c95b89424b.stex"
+path="res://.import/player_tileset.png-92fd0dd5e637e64236f2ea9147028816.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/entities/blub.png"
-dest_files=[ "res://.import/blub.png-4dbe4228dd2f65d0f84e40c95b89424b.stex" ]
+source_file="res://assets/entities/player_tileset.png"
+dest_files=[ "res://.import/player_tileset.png-92fd0dd5e637e64236f2ea9147028816.stex" ]
 
 [params]
 
